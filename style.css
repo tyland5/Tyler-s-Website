@@ -1,0 +1,167 @@
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(37, 35, 35);
+    margin: 0%;
+    font-size: 3.0rem;
+}
+
+.pc-nav{
+    display: flex;
+    font-size: 4rem;
+    top:0;
+    position: sticky;
+    width: 100%;
+    border: 5px solid black;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: grey;
+}
+
+.pc-nav a{
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+    transition-property: color; /*can do this with display? or change opacity*/
+    transition-duration: .5s;
+}
+
+.active{
+    color:white !important; /*specificity issue*/
+}
+
+.pc-nav a:hover{
+    color: white;
+}
+
+#home-section{
+    text-align: center;
+    color: white;
+    display: block;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#home-section p{
+    max-width: 600px;
+    margin:0 auto; /*this line is necessary*/
+}
+
+.portrait{
+    height: 350px; 
+    width: 350px; 
+    order: 2;
+}
+
+.header-label{
+    font-size: 4rem;
+}
+
+a:hover{
+    color:white;
+}
+
+#about-section{
+    background-color: rgb(46, 42, 42);
+    color: white;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.about-subsections{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.about-label{
+    margin-left: 5%;
+    margin-top: 0px;
+    width: 20.666%;
+}
+
+.about-info{
+    margin-left: 5%;
+    margin-right: 3%;
+    width: 66.333%;
+}
+
+.about-info p{
+    margin-top: 0px;
+}
+
+#socials-section{
+    padding-top: 97px;
+    padding-bottom: 97px;
+    color: white;
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.pfp{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.pfp:hover{
+    height: 300px;
+    width: 300px;
+}
+
+.testing{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1024px){
+    #home-section{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 1023px){
+    .about-label{
+        width: 100%;
+    }
+    .about-info{
+        width: 100%;
+    }
+    .pc-nav{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 767px){
+    body{
+        font-size: 2.0rem;
+    }
+
+    .header-label{
+        font-size: 3rem;
+    } 
+}
+
+@media only screen and (max-width: 499px){
+    .portrait{
+        height: 250px; 
+        width: 250px; 
+    }
+
+}
+
