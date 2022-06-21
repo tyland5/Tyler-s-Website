@@ -118,11 +118,6 @@ a:hover{
     margin: 10px;
 }
 
-.pfp:hover{
-    height: 300px;
-    width: 300px;
-}
-
 .testing{
     display: flex;
     flex-wrap: wrap;
@@ -131,6 +126,10 @@ a:hover{
 @media only screen and (min-width: 1024px){
     #home-section{
         display: flex;
+    }
+    .pfp:hover{
+        height: 300px;
+        width: 300px;
     }
 }
 
