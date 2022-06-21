@@ -153,7 +153,7 @@ a:hover{
     }
 
     .header-label{
-        font-size: 3rem;
+        font-size: 3.0rem;
     } 
 }
 
@@ -163,5 +163,9 @@ a:hover{
         width: 250px; 
     }
 
+    .pfp{
+        height: 150px;
+        width: 150px;
+    }
 }
 
