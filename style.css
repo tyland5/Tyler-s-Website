@@ -41,6 +41,20 @@ body{
     color: white;
 }
 
+.mobile-nav{
+    top:0;
+    position: sticky;
+    width: 100%;
+    text-align: center;
+    background-color: grey;
+    border: 4px solid black;
+}
+.mobile-nav p{
+    font-size: 3.5rem;
+    margin: 0px;
+    padding: 10px;
+}
+
 #home-section{
     text-align: center;
     color: white;
@@ -102,6 +116,10 @@ a:hover{
     margin-top: 0px;
 }
 
+.about-info li{
+    margin-bottom: 10px;
+}
+
 #socials-section{
     padding-top: 97px;
     padding-bottom: 97px;
@@ -130,6 +148,9 @@ a:hover{
     .pfp:hover{
         height: 300px;
         width: 300px;
+    }
+    .mobile-nav{
+        display: none;
     }
 }
 
