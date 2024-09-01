@@ -16,7 +16,7 @@ function navHighlighter() {
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop -88; // - sign for color change to happen earlier. + sign for later
-    sectionId = current.getAttribute("id");
+    let sectionId = current.getAttribute("id");
 
     let secClass = document.querySelector(".pc-nav a[href*=" + sectionId + "]").classList; //code motion optimization
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
@@ -43,6 +43,9 @@ function navChanger(){
       if(section === "home"){
         navBarIndicator.textContent = "Welcome"
       }
+      else if(section === "projects"){
+        navBarIndicator.textContent = "Projects"
+      } 
       else if(section === "about"){
         navBarIndicator.textContent = "About Me"
       } 
