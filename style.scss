@@ -1,0 +1,287 @@
+$navText: 3.4rem;
+$normalText: 2.4rem;
+$smallerText: 2.0rem;
+$header: 3.4rem;
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%; // doesnt matter since static website, but obv shouldn't do this
+}
+
+body{
+    font-size: $normalText;
+    background-color: rgb(37, 35, 35);
+    margin: 0%;
+}
+
+.header-label{
+    font-size: $header;
+}
+
+
+
+
+// end of global classes/id/component selection
+
+.pc-nav{
+    // & is called a parent selector
+    &{
+        display: flex;
+        font-size: $navText;
+        top:0;
+        position: sticky;
+        width: 100%;
+        border: 5px solid black;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: grey;
+    }
+
+    a{
+        padding: 15px;
+        color: black;
+        text-decoration: none;
+        transition-property: color; /*can do this with display? or change opacity*/
+        transition-duration: .5s;
+    }
+
+    a:hover{
+        color: white;
+    }
+}
+
+.active{
+    color:white !important; /*specificity issue*/
+}
+
+.mobile-nav{
+    &{
+        top:0;
+        position: sticky;
+        width: 100%;
+        text-align: center;
+        background-color: grey;
+        border: 4px solid black;
+    }
+
+    p{
+        font-size: $header;
+        margin: 0px;
+        padding: 10px;
+    }
+}
+
+// beginning of home section
+
+#home-section{
+    &{
+        text-align: center;
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap; // in case font too big
+        align-items: center;
+        padding-top: 70px;
+        padding-bottom: 120px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    p{
+        max-width: 600px;
+        margin:0 auto; /*this line is necessary for smaller views*/
+    }
+}
+
+.portrait{
+    height: 350px; 
+    width: 350px; 
+}
+
+// beginning of projects section
+
+#projects{
+    &{
+        background-color: rgb(46, 42, 42);
+        padding-right: 5%;
+        padding-left: 5%;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        color: white;
+    }
+
+    .description{
+        width: 60%;
+    }
+
+    .section{
+        margin-bottom: 5.0rem;
+    }
+
+    .right{
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    .right .description{
+        margin-right: 10%;
+    }
+}
+
+.project-image{
+    width: 70%;
+}
+
+.project-name{
+    font-size: $header;
+    font-weight: bold;
+}
+
+.runitup{
+    max-height: 600px;
+    max-width: 300px;
+    flex: 1;
+    flex-shrink: 1;
+    min-width: 0; // need this since default is auto, which prevents smaller than basis
+}
+
+.runitup-img-container{
+    display: flex; 
+    gap:16px;
+}
+
+// beginning of about section
+
+#about-section{
+    color: white;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.about-subsections{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    align-items: flex-start;
+}
+
+.about-label{
+    margin-left: 5%;
+    margin-top: 0px;
+    width: 20.666%;
+}
+
+.about-info{
+    &{
+        margin-left: 5%;
+        margin-right: 3%;
+        width: 66.333%;
+    }
+
+    p{
+        margin-top: 0px;
+    }
+
+    li{
+        margin-bottom: 2rem;
+    }
+}
+
+
+// beginning of socials section
+
+#socials-section{
+    background-color: rgb(46, 42, 42);
+    padding-top: 97px;
+    padding-bottom: 97px;
+    color: white;
+    text-align: center;
+}
+
+.pfp{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+}
+
+@media only screen and (min-width: 64rem){
+    .pfp:hover{
+        height: 300px;
+        width: 300px;
+    }
+    .mobile-nav{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 63.938rem){
+    #home-section{
+        display: block;
+    }
+
+    .about-label{
+        width: 100%;
+    }
+    .about-info{
+        width: 100%;
+    }
+    .pc-nav{
+        display: none;
+    }
+    #projects{
+        .description{
+            width: 80%;
+        }
+
+        .right{
+            display: block;
+        }
+
+        .right .description{
+            margin-right: 0;
+        }
+    }
+    .project-image{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 47.938rem){
+    body{
+        font-size: $smallerText;
+    }
+
+    .header-label{
+        font-size: $normalText;
+    } 
+
+    #projects .description{
+        width: 100%;
+    }
+
+    .project-name{
+        font-size: $normalText;
+    }
+}
+
+@media only screen and (max-width: 31.188rem){
+    .portrait{
+        height: 250px; 
+        width: 250px; 
+    }
+
+    .pfp{
+        height: 150px;
+        width: 150px;
+    }
+}
+

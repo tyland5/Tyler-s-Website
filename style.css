@@ -1,265 +1,234 @@
-html{
-    scroll-behavior: smooth;
-    font-size: 62.5%;
+* {
+  box-sizing: border-box;
 }
 
-*{
-    box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
-body{
-    background-color: rgb(37, 35, 35);
-    margin: 0%;
-    font-size: 3.0rem;
+body {
+  font-size: 2.4rem;
+  background-color: rgb(37, 35, 35);
+  margin: 0%;
 }
 
-.pc-nav{
-    display: flex;
-    font-size: 4rem;
-    top:0;
-    position: sticky;
-    width: 100%;
-    border: 5px solid black;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: grey;
+.header-label {
+  font-size: 3.4rem;
 }
 
-.pc-nav a{
-    padding: 15px;
-    color: black;
-    text-decoration: none;
-    transition-property: color; /*can do this with display? or change opacity*/
-    transition-duration: .5s;
+.pc-nav {
+  display: flex;
+  font-size: 3.4rem;
+  top: 0;
+  position: sticky;
+  width: 100%;
+  border: 5px solid black;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: grey;
+}
+.pc-nav a {
+  padding: 15px;
+  color: black;
+  text-decoration: none;
+  transition-property: color; /*can do this with display? or change opacity*/
+  transition-duration: 0.5s;
+}
+.pc-nav a:hover {
+  color: white;
 }
 
-.active{
-    color:white !important; /*specificity issue*/
+.active {
+  color: white !important; /*specificity issue*/
 }
 
-.pc-nav a:hover{
-    color: white;
+.mobile-nav {
+  top: 0;
+  position: sticky;
+  width: 100%;
+  text-align: center;
+  background-color: grey;
+  border: 4px solid black;
+}
+.mobile-nav p {
+  font-size: 3.4rem;
+  margin: 0px;
+  padding: 10px;
 }
 
-.mobile-nav{
-    top:0;
-    position: sticky;
-    width: 100%;
-    text-align: center;
-    background-color: grey;
-    border: 4px solid black;
+#home-section {
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 120px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.mobile-nav p{
-    font-size: 3.5rem;
-    margin: 0px;
-    padding: 10px;
+#home-section p {
+  max-width: 600px;
+  margin: 0 auto; /*this line is necessary for smaller views*/
 }
 
-#home-section{
-    text-align: center;
-    color: white;
+.portrait {
+  height: 350px;
+  width: 350px;
+}
+
+#projects {
+  background-color: rgb(46, 42, 42);
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: white;
+}
+#projects .description {
+  width: 60%;
+}
+#projects .section {
+  margin-bottom: 5rem;
+}
+#projects .right {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+#projects .right .description {
+  margin-right: 10%;
+}
+
+.project-image {
+  width: 70%;
+}
+
+.project-name {
+  font-size: 3.4rem;
+  font-weight: bold;
+}
+
+.runitup {
+  max-height: 600px;
+  max-width: 300px;
+  flex: 1;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.runitup-img-container {
+  display: flex;
+  gap: 16px;
+}
+
+#about-section {
+  color: white;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.about-subsections {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  align-items: flex-start;
+}
+
+.about-label {
+  margin-left: 5%;
+  margin-top: 0px;
+  width: 20.666%;
+}
+
+.about-info {
+  margin-left: 5%;
+  margin-right: 3%;
+  width: 66.333%;
+}
+.about-info p {
+  margin-top: 0px;
+}
+.about-info li {
+  margin-bottom: 2rem;
+}
+
+#socials-section {
+  background-color: rgb(46, 42, 42);
+  padding-top: 97px;
+  padding-bottom: 97px;
+  color: white;
+  text-align: center;
+}
+
+.pfp {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 10px;
+}
+
+@media only screen and (min-width: 64rem) {
+  .pfp:hover {
+    height: 300px;
+    width: 300px;
+  }
+  .mobile-nav {
+    display: none;
+  }
+}
+@media only screen and (max-width: 63.938rem) {
+  #home-section {
     display: block;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-top: 70px;
-    padding-bottom: 120px;
-    padding-left: 15px;
-    padding-right: 15px;
+  }
+  .about-label {
+    width: 100%;
+  }
+  .about-info {
+    width: 100%;
+  }
+  .pc-nav {
+    display: none;
+  }
+  #projects .description {
+    width: 80%;
+  }
+  #projects .right {
+    display: block;
+  }
+  #projects .right .description {
+    margin-right: 0;
+  }
+  .project-image {
+    width: 100%;
+  }
 }
-
-#home-section p{
-    max-width: 600px;
-    margin:0 auto; /*this line is necessary*/
-}
-
-.portrait{
-    height: 350px; 
-    width: 350px; 
-    order: 2;
-}
-
-.header-label{
-    font-size: 4rem;
-}
-
-a:hover{
-    color:white;
-}
-
-#projects{
-    background-color: rgb(46, 42, 42);
-    padding-right: 5%;
-    padding-left: 5%;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    color: white;
-}
-.project-image{
-    width: 70%;
-}
-
-.project-name{
-    font-size: 3.0rem;
-    font-weight: bold;
-}
-
-#projects .description{
-    width: 60%;
-}
-
-#projects .section{
-    margin-bottom: 5.0rem;
-}
-
-#projects .right{
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-}
-
-#projects .right .description{
-    margin-right: 10%;
-}
-
-.runitup{
-    height: 60rem;
-    width: 30rem;
-}
-
-#about-section{
-    color: white;
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
-
-.about-subsections{
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    align-items: flex-start;
-}
-
-.about-label{
-    margin-left: 5%;
-    margin-top: 0px;
-    width: 20.666%;
-}
-
-.about-info{
-    margin-left: 5%;
-    margin-right: 3%;
-    width: 66.333%;
-}
-
-.about-info p{
-    margin-top: 0px;
-}
-
-.about-info li{
-    margin-bottom: 10px;
-}
-
-#socials-section{
-    background-color: rgb(46, 42, 42);
-    padding-top: 97px;
-    padding-bottom: 97px;
-    color: white;
-    text-align: center;
+@media only screen and (max-width: 47.938rem) {
+  body {
+    font-size: 2rem;
+  }
+  .header-label {
     font-size: 2.4rem;
+  }
+  #projects .description {
+    width: 100%;
+  }
+  .project-name {
+    font-size: 2.4rem;
+  }
 }
-
-.pfp{
-    width: 250px;
+@media only screen and (max-width: 31.188rem) {
+  .portrait {
     height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 10px;
-}
-
-.testing{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-@media only screen and (min-width: 1024px){
-    #home-section{
-        display: flex;
-    }
-    .pfp:hover{
-        height: 300px;
-        width: 300px;
-    }
-    .mobile-nav{
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 1023px){
-    .about-label{
-        width: 100%;
-    }
-    .about-info{
-        width: 100%;
-    }
-    .pc-nav{
-        display: none;
-    }
-    #projects .description{
-        width: 80%;
-    }
-    #projects .right{
-        display: block;
-    }
-    #projects .right .description{
-        margin-right: 0;
-    }
-    .project-image{
-        width: 80%;
-    }
-}
-
-
-@media only screen and (max-width: 767px){
-    body{
-        font-size: 2.0rem;
-    }
-
-    .header-label{
-        font-size: 2.4rem;
-    } 
-
-    #projects .description{
-        width: 100%;
-        font-size: 2.0rem;
-        
-    }
-
-    .project-name{
-        font-size: 2.4rem;
-    }
-
-    .runitup{
-        height: 40rem;
-        width:20rem;
-    }
-
-}
-
-@media only screen and (max-width: 499px){
-    .portrait{
-        height: 250px; 
-        width: 250px; 
-    }
-
-    .pfp{
-        height: 150px;
-        width: 150px;
-    }
-
-    .runitup{
-        height: 30rem;
-        width: 15rem;
-    }
-}
-
+    width: 250px;
+  }
+  .pfp {
+    height: 150px;
+    width: 150px;
+  }
+}/*# sourceMappingURL=style.css.map */
