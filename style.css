@@ -11,15 +11,16 @@ body {
   font-size: 2.4rem;
   background-color: rgb(37, 35, 35);
   margin: 0%;
+  font-family: "Roboto", "Montserrat", Arial;
 }
 
 .header-label {
-  font-size: 3.4rem;
+  font-size: 3rem;
 }
 
 .pc-nav {
   display: flex;
-  font-size: 3.4rem;
+  font-size: 3rem;
   top: 0;
   position: sticky;
   width: 100%;
@@ -52,7 +53,7 @@ body {
   border: 4px solid black;
 }
 .mobile-nav p {
-  font-size: 3.4rem;
+  font-size: 3rem;
   margin: 0px;
   padding: 10px;
 }
@@ -107,7 +108,7 @@ body {
 }
 
 .project-name {
-  font-size: 3.4rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -210,7 +211,7 @@ body {
 }
 @media only screen and (max-width: 47.938rem) {
   body {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .header-label {
     font-size: 2.4rem;

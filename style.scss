@@ -1,7 +1,7 @@
-$navText: 3.4rem;
+$navText: 3.0rem;
 $normalText: 2.4rem;
-$smallerText: 2.0rem;
-$header: 3.4rem;
+$smallerText: 1.8rem;
+$header: 3.0rem;
 
 *{
     box-sizing: border-box;
@@ -16,6 +16,7 @@ body{
     font-size: $normalText;
     background-color: rgb(37, 35, 35);
     margin: 0%;
+    font-family: "Roboto", "Montserrat", Arial;
 }
 
 .header-label{
